@@ -1,4 +1,4 @@
-# FrontEnd - LocalStorage,SessionStorage
+# FrontEnd - LocalStorage-SessionStorage
 
 ## 설명
 
