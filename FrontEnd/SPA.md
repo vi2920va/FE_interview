@@ -1,4 +1,4 @@
-# React - SPA, CSR
+# FrontEnd - SPA, CSR
 
 ## 설명
 
