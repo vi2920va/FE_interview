@@ -4,15 +4,15 @@
 
 [![9935-C9425-AE422-C52-C.png](https://i.postimg.cc/qRLR1cDx/9935-C9425-AE422-C52-C.png)](https://postimg.cc/xJXnCm2X)
 
-## 1. 이벤트 버블링(Event Bubbing)
+### 1. 이벤트 버블링(Event Bubbing)
 
 이벤트 버블링은 특정 요소에서 이벤트가 발생했을 때, 해당 이벤트가 상위 요소들까지 전달되어 특성을 의미합니다.
 
-## 2. 이벤트 위임(Event Delegation)
+### 2. 이벤트 위임(Event Delegation)
 
 이벤트 위임은 하위 요소에 각각의 이벤트를 붙이지 않고, 상위 요소에 하위 요소의 이벤트를 제어하는 방식 입니다.
 
-## 3. 이벤트 캡쳐(Event Capture)
+### 3. 이벤트 캡쳐(Event Capture)
 
 이벤트 캡쳐는 이벤트 버블링과 반대 방향으로 진행되는 전파 방식 입니다.
 
