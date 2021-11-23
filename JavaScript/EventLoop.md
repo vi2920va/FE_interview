@@ -1,4 +1,4 @@
-# JavaScript - 이벤트 루프
+# JavaScript - Event Loop
 
 ## 설명
 
