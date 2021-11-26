@@ -1,4 +1,4 @@
-# React - React Operation && Optimization Techniques
+# React - 리액트 동작 요소와 가상돔(React Operation && Optimization Techniques)
 
 ## 설명
 

@@ -1,4 +1,4 @@
-# React - Class-based-Components
+# React - 클래스 컴포넌트(Class-based-Components)
 
 ## 설명
 

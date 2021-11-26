@@ -1,4 +1,4 @@
-# React - React.memo-useCallback_useMemo
+# React - React.memo, useMemo, useCallback
 
 ## 설명
 
