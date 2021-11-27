@@ -54,3 +54,5 @@ REST는 웹에 존재하는 모든 자원에 고유한 URL를 부여하여 자�
 ## 참고
 
 - [REST API, RESTful API](https://velog.io/@stampid/REST-API%EC%99%80-RESTful-API)
+- [프론트엔드와 백엔드가 소통하는 엔드포인트, RESTful API
+](https://evan-moon.github.io/2020/04/07/about-restful-api/)
