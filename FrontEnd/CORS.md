@@ -27,6 +27,8 @@
 | 교차 출처 삽입 | ✅         | script 태그 내의 src, link 태그 내의 href, img 또는 video 태그, @font-fac, iframe ... |
 | 교차 출처 읽기 | ❎         |                                                              |
 
+
+
 ### 2. CORS (Cross-Origin Resource Sharing)
 
 브라우저는 보안상의 이유로 교차출처 HTTP  요청을 제한한다. 브라우저의 Web API인 XMLHttpRequest와 Fetch API 역시 동일 출처 정책을 따른다. 그래서 다른 출처에서 리소스를 가져오기 위해서는 그 출처에서 CORS 헤더를 포함한 응답을 반환해야 한다.
@@ -38,8 +40,6 @@ OPTIONS 메서드를 통해 도메인의 리소스로 HTTP요청을 보내 **실
 요청 헤더에 Origin과 Access-Control-Request-Method를 포함해 어떤 출처에서 보낸 것이며, 어떤 메소드를 사용할지 서버에 알려준다. Access-Control-Request-* 헤더는 Preflight 요청에서만 보내고 실제 요청을 보낼 때는 포함시키지 않는다.
 
 서버는 응답 헤더에 가능한 출처의 목록(*는 모든 도메인에서 접근가능함을 의미)과 요청 가능한 메소드들의 종류를 보내준다.
-
-
 
 #### 단순 요청
 
@@ -55,8 +55,63 @@ OPTIONS 메서드를 통해 도메인의 리소스로 HTTP요청을 보내 **실
 
 
 
+### 3. CORS 해결방법
+
+#### 서버에서 CORS를 허용해주기
+
+서버를 직접 제어할 수 있다면, 서버에서 `Access-Control-Allow-Origin` 헤더에 클라이언트 출처를 허용해주면 된다. 가장 정석인 방법이지만, Open API를 사용할 때처럼 서버를 직접 제어할 수 없는 경우에는 사용할 수 없다.
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.get('/allow-cors', function(request, response) {
+ response.set('Access-Control-Allow-Origin', '허용 도메인');
+ response.sendFile(__dirname + '/message.json');
+});
+
+const listener = app.listen(process.env.PORT, function() {
+  console.log('Your app is listening on port ' + listener.address().port);
+});
+```
+
+위의 방법은 가장 정석이지만, 서버에서 응답을 보낼 때마다 `Access-Control-Allow-Origin` 헤더를 추가해줘야하는 번거로움이 있다. Express를 이용해 서버를 구축한 경우 Node.js 미들웨어인 CORS를 설치하면 매번 CORS관련 설정을 직접해줄 필요가 없다.
+
+```javascript
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors({ origin: '허용 도메인' }));
+```
+
+#### 프록시 서버 사용하기
+
+서버를 직접 제어할 수 없는 상황이라면 프록시 서버를 사용하는 방법이 있다. CORS 정책은 브라우저에서 강제하는 방법이다. 서버에서 브라우저에게 몇몇 조건이 걸린 헤더들을 내려주면 브라우저에서는 SOP를 지키며 작업을 처리하지만 프록시 서버는 그렇지 않다. 서버 간 통신에서는 이 정책이 적용되지 않기 때문이다.
+
+또한 프록시 서버는 클라이언트에게 응답을 보낼 때 `Access-Control-Allow-Origin`의 출처로 요청 도메인의 출처를 포함시켜주면 되기 때문에 CORS 문제를 해결 할 수 있다.
+
+#### https-proxy-middleware 라이브러리 설치
+
+개발 중에 로컬 환경에서 클라이언트와 서버의 출처의 포트번호가 달라 CORS 문제가 발생할 때 사용하는 방법이다. CRA환경에서 개발중일 때도 사용할 수 있다.
+
+- [https-proxy-middleware 모듈](https://github.com/chimurai/http-proxy-middleware#readme)
+- [CRA에서 https-proxy-middleware 설정방법](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
+
+
+
+## 요약
+
+- SOP는 동일한 출처에서만 리소스를 상호작용하도록 제한하는 정책이다.
+- 현실적으로 SOP를 지키기는 어렵기 때문에, 브라우저에서는 CORS 정책을 통해 출처가 다른 도메인 간의 리소스 상호작용을 제한적으로 허용한다.
+- 브라우저는 Preflight 요청을 통해서 서버에 요청을 보내도 되는지 확인 요청을 보낸다. 이때 클라이언트의 출처를 밝히는 `Origin` 헤더를 포함해 요청을 보내고, 서버에서는 요청이 가능한 출처를 포함한 `Access-Control-Allow-Origin` 헤더를 포함해 응답을 보내준다.
+- CORS 이슈는 서버에서 클라이언트를 허용 출처로 포함해주는 것이 가장 최선이지만, 서버를 제어할 수 없는 환경에서는 프록시 서버를 이용해 해결할 수 있다.
+
 ## 참고
 - [MDN - 동일 출처 정책](https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy)
 - [MDN - CORS](https://developer.mozilla.org/ko/docs/Web/HTTP/CORS)
 - [AWS - REST API 리소스에 대한 CORS 활성화](https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/how-to-cors.html)
+- [web.dev - CORS](https://web.dev/cross-origin-resource-sharing/)
+- [stackexchange - CORS Proxy가 작동하는 방법](https://security.stackexchange.com/questions/191737/how-do-cors-proxy-websites-work)
+- [CORS 해결방법 내용 참고 블로그](https://xiubindev.tistory.com/115)
 
