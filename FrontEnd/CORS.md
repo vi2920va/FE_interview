@@ -114,4 +114,4 @@ app.use(cors({ origin: '허용 도메인' }));
 - [web.dev - CORS](https://web.dev/cross-origin-resource-sharing/)
 - [stackexchange - CORS Proxy가 작동하는 방법](https://security.stackexchange.com/questions/191737/how-do-cors-proxy-websites-work)
 - [CORS 해결방법 내용 참고 블로그](https://xiubindev.tistory.com/115)
-
+- [CORS는 왜 이렇게 우리를 힘들게 하는걸까?](https://evan-moon.github.io/2020/05/21/about-cors/)
