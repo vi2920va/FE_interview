@@ -102,7 +102,42 @@ function MeasureExample() {
 }
 ```
 
+### Forwarding Refs
 
+`ref`를 컴포넌트를 통해 자식 컴포넌트 중 하나에 전달하는 기법을 의미한다. `forwardRef`함수로 둘러싼 컴포넌트에 `ref`를 전달하면, `forwardRef`의 자식 컴포넌트에 `ref`가 전달된다.
+
+App.js
+
+```
+import { createRef } from "react";
+import FancyButton from "./FancyButton";
+
+const ref = createRef();
+
+export default function App() {
+  return (
+    <div className="App">
+      <FancyButton ref={ref}>Click me!</FancyButton>
+    </div>
+  );
+}
+
+```
+
+FancyButton.js
+
+```
+import React from "react";
+
+const FancyButton = React.forwardRef((props, ref) => {
+  return <button ref={ref}>{props.children}</button>;
+});
+
+export default FancyButton;
+
+```
+
+위 예시에서는 `forwardRef`함수안의 `<button>` 태그 안에 ref가 전달된다. 그리고 `forwardRef` 안의 함수에 함수인자로 `props`와 `ref`가 있는데, `ref`인자는 `forwardRef`함수를 사용할 때만 존재한다.
 
 ## 요약
 
