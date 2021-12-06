@@ -1,8 +1,10 @@
-# Custom Hook
+# React - Custom Hook
 
 커스텀 훅은 상태 저장 방식이 비슷한 로직일 경우 해당 방식을 재사용하기 위해서 만들어 질수 있습니다. 기본적으로 기본으로 제공되는 훅과 비슷한 맥락이며 훅룰을 지킵니다.
 
-> ## 훅 규칙
+## 설명
+
+### 1. 훅 규칙
 
 - 최 상위 레벨에서 호출합니다.
 - React 함수 컴포넌트 안에서 사용합니다.
@@ -13,13 +15,13 @@
 
 > 주의 해야할 사항으로 커스텀 훅이 함수를 반환하고 컴포넌트 안에서 해당 함수를 사용할 때 해당 함수는 컴포넌트가 실행할때마다 재생성되는 것이기 때문에, `useEffect` 를 사용하는 경우 커스텀 훅안에 있는 함수들을 useCallback 으로 wrapping 해줘야합니다.
 
-### axios 상태를 관리하는 커스텀 훅
+### 2. axios 상태를 관리하는 커스텀 훅
 
 ![](https://images.velog.io/images/doodream/post/267f16b9-eb1b-4fba-b73a-4c0fa90b2082/image.png)
 
 위 코드는 `api`를 ajax 함수인 axios를 관리하는 커스텀 훅으로서 isLoading, error, sendRequest를 반환합니다.
 
-### 간단하게 훅을 사용한 컴포넌트
+### 3. 간단하게 훅을 사용한 컴포넌트
 
 ![](https://images.velog.io/images/doodream/post/9e8ffc13-54f2-49f1-8a44-eed502ac6815/image.png)
 

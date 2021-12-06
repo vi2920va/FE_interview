@@ -25,7 +25,7 @@
 
 - 예시 1
 
-```
+```js
 // Does not work!
 count; // throws `ReferenceError`
 let count;
@@ -35,7 +35,7 @@ count = 10;
 
 - 예시 2
 
-```
+```js
 // 다시, let 변수도 선언 이후에 사용해야 한다.
 
 
