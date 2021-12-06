@@ -29,3 +29,4 @@ ex) c++ ⇒ c, coffescript ⇒ javascript
 ## 요약
 
 - 바벨은 ES2015 상위 버전 코드를 하위 버전의 코드로 변환시켜주는 자바스크립트 트랜스파일러입니다.
+- React 에서는 JSX코드를 createElement 함수를 이용해 변환시켜 준다.
