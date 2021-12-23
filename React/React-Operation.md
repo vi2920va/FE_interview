@@ -2,13 +2,13 @@
 
 ## 설명
 
-### React 동작요소
+### 1. React 동작요소
 
 - `React`는 사용자 인터페이스를 만들기 위해서 `Components`라는 개념요소를 사용합니다. 그리고 이렇게 구성된 사용자 인터페이스를 효과적으로 업데이트 하게됩니다.
 - `ReactDOM`도 있습니다. 이 `ReactDOM`은 결국에는 `React` 자체와는 다르게 웹에 대한 인터페이스 입니다. 무슨말 이냐면 `React.js` 우리가 부르는 `React`는 **웹에 대해서 관여하지 않습니다.** 브라우저에 대해서 아무것도 모릅니다.
-  ![](https://images.velog.io/images/doodream/post/c01b5661-0d42-4be7-aed2-107b05626eab/image.png)
+  ![react](https://images.velog.io/images/doodream/post/c01b5661-0d42-4be7-aed2-107b05626eab/image.png)
 
-### ReactDOM
+### 2.ReactDOM
 
 - `React`는 `Components`를 사용하지만 해당구성요소 안에 HTML tag가 포함되어있는지 아닌지 아니면 완전히 허상의 Element tag가 있는지 아닌지는 중요하지 않습니다. 결국에 이를 표현하게 브라우저에 전달해주는 것은 `ReactDOM`의 일입니다. 궁극적으로 실제 HTML요소를 화면에 불러오게 해줍니다.
 - React는 컴포넌트를 관리하는 라이브러리일 뿐이고 (이전상태와 비교했을때 어떻게 달라졌는지) 이렇게 변경된 모든 사항에 대해서 ReactDOM에 전달해줍니다. 이렇게 ReactDOM은 실제 화면이 어떻게 보여질지 에 대한 것에 그 기능이 있습니다.
