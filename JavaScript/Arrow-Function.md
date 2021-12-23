@@ -31,8 +31,9 @@ person.sayHi(); // Hi undefined
 
 ## 요약
 
-즉, 화살표 함수는 짧은 함수를 작성하거나, *컨텍스트**가 없는 짧은 코드를 담을 용도로 만들어졌다.
+즉, 화살표 함수는 짧은 함수를 작성하거나, **컨텍스트**가 없는 짧은 코드를 담을 용도로 만들어졌다.
 
 ## 참고
+
 [자바스크립트 화살표 함수 도입](https://ui.toast.com/weekly-pick/ko_20160912)
 [화살표함수(MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

@@ -11,7 +11,7 @@ Box Model은 margin, border, padding, content로 이루어져 있습니다.
 - border : content와 padding을 감싸는 테두리
 - margin : border와 다른 요소사이의 간격
 
-### box-sizing
+### 1. box-sizing
 
 - box-sizing : content-box는 기본 박스모델의 넓이값으로 계산
 - box-sizing : border-box는 content,padding,border까지 요소의 width, height값으로 설정합니다.
