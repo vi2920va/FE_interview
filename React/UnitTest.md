@@ -43,7 +43,6 @@
 - 이 두 도구(Jest, react-test-library)들은 CRA로 리액트 프로젝트를 생성하면 모두 들어있습니다.
 - 그리고 해당 프로젝트 안에는 기본적인 App.js의 테스트 코드 예제가 들어있습니다.
 
-
 ## 요약
 
 - 프로젝트를 테스트 할때에는 3가지 규모가 있습니다. 유닛테스트, 통합테스트, e2e
@@ -51,6 +50,7 @@
 - React에서의 테스트 도구로서 Jest, react-testing-library가 가장많이 사용됩니다.
 
 ## 참고
+
 - [Udemy 강의](http://https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25599684#content)
 - [Jest 공식 홈페이지](https://jestjs.io/)
 - [react testing library 공식 홈페이지](https://testing-library.com/docs/react-testing-library/intro/)
