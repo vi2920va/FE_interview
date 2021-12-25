@@ -12,3 +12,5 @@
 - [웹팩(WebPack)](./FrontEnd/Webpack.md)
 - [폴리필(Polyfill)](./Polyfill.md)
 - [상태관리](./상태관리.md)
+- [크로스브라우징](./Cross-Browsing.md)
+- [CORS](./CORS.md)

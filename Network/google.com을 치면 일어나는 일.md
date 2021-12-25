@@ -67,6 +67,6 @@
 
 ## 참고
 
-https://luckyyowu.tistory.com/133
-https://kor.go-travels.com/45747-what-is-a-dns-cache-817514-7367974
-https://devjin-blog.com/what-happen-browser-search/
+- [운영체제 04 : 시스템 콜 (시스템 호출, System Call)](https://luckyyowu.tistory.com/133)
+- [어떻게: DNS 캐시 란 무엇이며 어떻게 작동합니까?](https://kor.go-travels.com/45747-what-is-a-dns-cache-817514-7367974)
+- [Browser에 www.google.com을 검색하면 어떤 일이 일어날까?](https://devjin-blog.com/what-happen-browser-search/)
