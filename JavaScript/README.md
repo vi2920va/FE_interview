@@ -6,6 +6,7 @@
 - [원시값과 객체비교](./원시값과객체의비교.md)
 - [표현식과 문](./표현식과문.md)
 - [실행 컨텍스트](./실행컨텍스트.md)
+- [클로저](./Closure.md)
 - [함수의 호출(call, apply, bind)](./Calll-apply-bind.md)
 - [화살표함수](../JavaScript/Arrow-Function.md)
 - [Ajax](./Ajax.md)
