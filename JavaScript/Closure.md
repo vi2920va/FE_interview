@@ -113,7 +113,8 @@ var는 function scope이기 때문에 for문에서 var를 사용하면 전역변
 #### 5-2. 예시
 
 ```javascript{ .numberLines}
-// 출처: https://velog.io/@draw/for%EB%AC%B8%EC%97%90%EC%84%9C-var%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%83%9D%EA%B8%B0%EB%8A%94-%EB%AC%B8%EC%A0%9C%EC%A0%90
+
+// 출처 : 반복문 for에서 var를 사용하면 생기는 문제점 - draw.log
 
 // 코드 1-1
 var arr = [];
@@ -158,7 +159,8 @@ arr[4] = function () {
 ##### 5-2-1. 해결 방안 예시 1
 
 ```javascript{ .numberLines}
-// 출처: https://velog.io/@draw/for%EB%AC%B8%EC%97%90%EC%84%9C-var%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%83%9D%EA%B8%B0%EB%8A%94-%EB%AC%B8%EC%A0%9C%EC%A0%90
+
+// 출처 : 반복문 for에서 var를 사용하면 생기는 문제점 - draw.log
 
 for (var i = 0; i < 5; i++) {
   arr[i] = function (index) {
@@ -174,8 +176,7 @@ for (var i = 0; i < 5; i++) {
 ##### 5-2-2. 해결 방안 예시 2: let을 씁니다.
 
 ```javascript{ .numberLines}
-// 출처: https://velog.io/@draw/for%EB%AC%B8%EC%97%90%EC%84%9C-var%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EC%83%9D%EA%B8%B0%EB%8A%94-%EB%AC%B8%EC%A0%9C%EC%A0%90
-
+// 출처 : 반복문 for에서 var를 사용하면 생기는 문제점 - draw.log
 
 // 블록 스코프인 let 사용
 for (let i = 0; i < 5; i++) {
