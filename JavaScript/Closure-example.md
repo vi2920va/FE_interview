@@ -72,13 +72,13 @@ console.log(count()); // 2
 ```javascript{ .numberLines}
 // 출처: 코어 자바스크립트
 
-var debounce = funtion(eventName, func, wait){
+var debounce = function(eventName, func, wait){
     var timeoutId = null;
     return function(event){
         var self = this;
         console.log(eventName, 'event 발생');
         clearTimeout(timeoutId);
-        timeoutId = setTimeout(this.bind(self, event), wait);
+        timeoutId = setTimeout(func.bind(self, event), wait);
     };
 };
 
