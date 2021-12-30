@@ -8,6 +8,8 @@
 
 트리를 버릴 때 이전 DOM 노드들은 모두 파괴된다. 그리고 `componentWillUnmount` 함수가 실행되고, 새로운 트리를 만들기 때문에 `componentDidMount`가 이어서 실행된다. 이때 **이전 트리와 연관된 모든 state는 삭제된다.**
 
+(함수 컴포넌트에서도 마찬가지로 DOM노드가 파괴될때는 useEffect의 클린함수의 내용이 실행되고, DOM 재생성 시에는 초기 실행 시 실행되는 useEffect 함수가 실행된다.)
+
 가령 아래처럼 `div`태그에서 `span`태그로 변경되면, 이전 `Counter`는 사라지고 새로 다시 마운트된다.
 
 ```jsx
