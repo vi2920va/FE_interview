@@ -17,13 +17,13 @@
 
 ### 2. axios 상태를 관리하는 커스텀 훅
 
-![](https://images.velog.io/images/doodream/post/267f16b9-eb1b-4fba-b73a-4c0fa90b2082/image.png)
+![axios](https://images.velog.io/images/doodream/post/267f16b9-eb1b-4fba-b73a-4c0fa90b2082/image.png)
 
 위 코드는 `api`를 ajax 함수인 axios를 관리하는 커스텀 훅으로서 isLoading, error, sendRequest를 반환합니다.
 
 ### 3. 간단하게 훅을 사용한 컴포넌트
 
-![](https://images.velog.io/images/doodream/post/9e8ffc13-54f2-49f1-8a44-eed502ac6815/image.png)
+![hook](https://images.velog.io/images/doodream/post/9e8ffc13-54f2-49f1-8a44-eed502ac6815/image.png)
 
 위 코드는 커스텀훅에서 반환된 sendRequest를 간단하게 사용하였습니다.
 
@@ -34,4 +34,4 @@
 
 ## 참고
 
--[Udemy 강의](http://https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25599684#content)
+- [Udemy 강의](http://https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25599684#content)

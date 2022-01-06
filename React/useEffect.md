@@ -24,4 +24,3 @@
 ## 요약
 
 - useEffect Hook을 사용하면 함수 컴포넌트에서 side effect를 수행할 수 있습니다.
-

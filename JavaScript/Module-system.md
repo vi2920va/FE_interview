@@ -33,9 +33,9 @@ top level await 주의해야 합니다.
 
 ### 4. Module을 import/export 하는 방법
 
-#### export
+#### 4-1. export
 
-- export 는 다른 파일에서 사용할 수 있도록 모듈을 내보냅니다.
+- export는 다른 파일에서 사용할 수 있도록 모듈을 내보냅니다.
 
 - 종류
 
@@ -47,7 +47,7 @@ top level await 주의해야 합니다.
 
   - default export 는 모듈에서 하나만 존재할 수 있습니다.
 
-#### import
+#### 4-2. import
 
 - import 는 다른 파일에서 모듈을 불러옵니다.
 - default export 를 불러오거나, named export 를 불러올 수 있습니다.
