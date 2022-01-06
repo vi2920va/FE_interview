@@ -2,85 +2,47 @@
 
 ## 설명
 
-- `props.children`은 컴포넌트의 여는 태그와 닫는 태그 사이의 **로직, 배열 등 형태와 상관없이** 다른 컴포넌트에 내용을 전달할 수 있습니다.
-- 즉, `props.children`은 공통된 레이아웃에 많이 사용됩니다.
-
-### 1. 예제
-
-- 두 개의 사진을 자세히 보면 공통된 부분을 찾을 수 있습니다.
-- 이 경우에 컨테이너 컴포넌트를 만들고, 콘텐츠의 내용을 `props.children`을 사용할 수 있습니다.
-
-[![2.png](https://i.postimg.cc/BnmGw4jp/2.png)](https://postimg.cc/4YHMYCbH)
-
-[![4.png](https://i.postimg.cc/253NsMvD/4.png)](https://postimg.cc/5HcrvPn7)
+- React는 강력한 합성 모델을 가지고 있으며, 상속 대신에 합성을 사용하여 컴포넌트 간에 코드를 재사용하는 것이 좋습니다.
+- `props.children`은 컴포넌트의 **여는 태그와 닫는 태그 사이의 내용을**  포함한다.
+- 즉, 태그와 태그 사이에 담을 내용을 `props.children`이라는 값으로 접근할 수 있습니다.
 
 ```jsx
-import React, { useState } from 'react';
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+// App.jsx
+import Dialog from "./Dialog";
 
-function Slide({ title, list, name, children, onSlide }) {
-  const [slideCount, setSlideCount] = useState(1);
-
-  const handleNextClick = () => {
-    if (slideCount < list.length) {
-      setSlideCount(prev => prev + 1);
-      onSlide('next', slideCount);
-    }
-  };
-  const hadlePrevClick = () => {
-    if (slideCount > 1) {
-      setSlideCount(prev => prev - 1);
-      onSlide('prev', slideCount);
-    }
-  };
-
-  if (list.length === 0) {
-    return null;
-  }
-
+const App = () => {
   return (
-    <section className="slide">
-      <div className={`slide-wrapper__${name}`}>
-        <h3 className={`slide-title__${name}`}>{title}</h3>
-        <ol className={`slide-count__list-${name}`}>
-          <li>
-            <button
-              className="button--prev"
-              disabled={slideCount === 1}
-              onClick={hadlePrevClick}
-            >
-              <FiChevronLeft />
-            </button>
-          </li>
-          <li className="count--item">
-            <div className="count--item__text">
-              <span>{slideCount}</span>
-              <span>/</span>
-              <span>{list.length}</span>
-            </div>
-          </li>
-          <li>
-            <button
-              className="button--next"
-              onClick={handleNextClick}
-              disabled={slideCount === list.length}
-            >
-              <FiChevronRight />
-            </button>
-          </li>
-        </ol>
-      </div>
-      {children}
-    </section>
+    <div>
+      <Dialog title="welcome" message="react props message!" />
+      <button>button</button>
+    </div>
   );
-}
+};
+export default App;
+```
 
-export default Slide;
+```jsx
+// Dialog.jsx
+import React from "react";
+
+const Dialog = (props) => {
+  return (
+    <div color="blue">
+      <h1 className="dialog-title">{props.title}</h1>
+      <p className="dialog-message">{props.message}</p>
+      {props.children}
+    </div>
+  );
+};
+export default Dialog;
+
 ```
 
 ## 요약
 
-`props.children`은 JSX에서 태그와 태그 사이에 속성(props)입니다. 
+- `props.children`은 컴포넌트에서 다른 컴포넌트를 담을 때 사용할 수 있습니다.
+- 특수한 경우에는 컴포넌트 사용을 고려해야 하는 경우, 구체적인 컴포넌트가 일반적인 컴포넌트를 렌더링하고 `props`  를 통해 전달할 수 있습니다.
+- 컴포넌트에 `props.children`를 여러 번 사용해서도 쓸 수 있습니다.
 
 ## 참고
 
