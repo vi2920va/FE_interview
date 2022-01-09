@@ -2,7 +2,7 @@
 
 ## 설명
 
-### OOP
+### 1. OOP
 
 자바스크립트에서 객체 지향이라는 것은 다양하게 설명이 가능합니다.
 
@@ -13,7 +13,7 @@
 
 이중에서 상속에 대해서 자바스크립트는 [[Prototype]] 이라는 특이한 성질을 가집니다.
 
-### prototype & `__proto__` & [[Prototype]]
+### 2. prototype & `__proto__` & [[Prototype]]
 
 ![](https://images.velog.io/images/doodream/post/ff5a8b3d-4a34-4f38-ac38-fe0763ade307/image.png)
 
@@ -131,7 +131,7 @@ console.log(arr.unique());
 // [1, 2, 3, 4, 5];
 ```
 
-### 폴리필
+### 4. 폴리필
 
 사실 위 코드는 네이티브 프로토 타입을 변경한 것입니다.
 모던 자바스크립트에서 네이티브 프로토 타입을 변경할 때에는 폴리필을 만들때입니다.

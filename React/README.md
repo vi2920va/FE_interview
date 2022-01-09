@@ -1,12 +1,14 @@
 # React
 
-- [왜 리액트인가](./React/Why-React.md)
-- [리액트 동작요소와 가상돔](./React/React-Operation.md)
-- [리액트 클래스 컴포넌트](./React/Class-based-Components.md)
+- [왜 리액트인가](./Why-React.md)
+- [props.children](./Props-Children.md)
+- [리액트 동작요소와 가상돔](./React-Operation.md)
+- [리액트 클래스 컴포넌트](./Class-based-Components.md)
 - [리액트 재조정](./Reconciliation.md)
 - [useState, useReducer](./UseState-useReducer.md)
 - [useEffect](./useEffect.md)
+- [useEffect vs useLayoutEffect](./React.useEffect-useLayoutEffect.md)
 - [ref, React.forwardRef, useRef](./Ref-CallbackRef.md)
 - [customHook](./CustomHook.md)
-- [React.memo, useMemo, useCallback](./React/React.memo-useCallback-useMemo.md)
+- [React.memo, useMemo, useCallback](./React.memo-useCallback-useMemo.md)
 - [UnitTest](./UnitTest.md)
