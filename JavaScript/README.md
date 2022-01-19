@@ -1,11 +1,12 @@
 # JavaScript
-
+- [데이터타입](./데이터타입.md)
 - [변수(var, let, const)](./JavaScript/Let-Const.md)
 - [범위(Scope)](./JavaScript/scope.md)
 - [this](./JavaScript/This.md)
 - [원시값과 객체비교](./원시값과객체의비교.md)
 - [표현식과 문](./표현식과문.md)
 - [실행 컨텍스트](./실행컨텍스트.md)
+- [prototype](./Prototype.md)
 - [클로저](./Closure.md)
 - [클로저 예제](./Closure-example.md)
 - [함수의 호출(call, apply, bind)](./Calll-apply-bind.md)
@@ -18,6 +19,7 @@
 - [이벤트 위임, 버블링, 캡처링](./Event-Bubbing-Delegation-Capture.md)
 - [이벤트루프(Event Loop)](./EventLoop.md)
 - [이벤트 핸들러(Event Handler)](./EventHandler.md)
+- [Timer](./Timer.md)
 - [Array.forEach VS Array.map](./ArrayForEach-ArrayMap.md)
 - [require VS import](./Require-Import.md)
 - [Hoisting, TDZ](./Hoisting-and-TDZ.md)

@@ -5,8 +5,8 @@
 ### 1. 호출 스케일링
 
 - 호출 스케일링이란 함수를 명시적으로 호출하지 않고 일정 시간이 경과된 이후에 호출되도록 함수 호출을 예약하기 위해 타이머 함수를 사용하는 것을 말합니다.
-- 자바사크립트는 타이머를 생성할 수 있는 타이머 함수 setTimeout과 setInterval, 타이머를 제거할 수 있는 타이머 함수 clearTimeout과 clearInterval을 제공합니다.
-- 타이머 setTimeout과 setinterval은 모두 일정 시간이 경과된 이후 콜백 함수가 호출되도록 타이머를 생성합니다.
+- 자바스크립트는 타이머를 생성할 수 있는 타이머 함수 setTimeout과 setInterval, 타이머를 제거할 수 있는 타이머 함수 clearTimeout과 clearInterval을 제공합니다.
+- 타이머 setTimeout과 setInterval은 모두 일정 시간이 경과된 이후 콜백 함수가 호출되도록 타이머를 생성합니다.
 - 자바스크립트 엔진은 단 하나의 실행 컨텍스트 스택을 갖기 때문에 두 가지 이상의 태스크를 동시에 실행할 수 없습니다.
 - 이런 이유로 타이머 함수 setTimeout과 setInterval은 비동기 처리 방식으로 동작합니다.
 
@@ -118,7 +118,7 @@ $container.addEventListener('scroll', throttle(()=>{
     $throttleCount.textContent = ++ throttleCount;
 },100));
 ```
-- throttle 함수가 반환한 함수는 throttl 함수에 두 번째 인수로 전달한 시간이 경과하기 이전에 이벤트가 발생하면 아무것도 하지 않다가 delay 시간이 경과했을 때 이벤트가 발생하면 콜백 함수를 호출하고 새로운 타이머를 재설정합니다.
+- throttle 함수가 반환한 함수는 throttle 함수에 두 번째 인수로 전달한 시간이 경과하기 이전에 이벤트가 발생하면 아무것도 하지 않다가 delay 시간이 경과했을 때 이벤트가 발생하면 콜백 함수를 호출하고 새로운 타이머를 재설정합니다.
 - 따라서 delay 시간 간격으로 콜백 함수가 호출됩니다.
 
 ## 요약
