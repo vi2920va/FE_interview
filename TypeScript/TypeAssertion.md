@@ -1,4 +1,4 @@
-# Typescript - TypeAssertion
+# Typescript - TypeAssertion vs TypeAnnotation
 
 ## 설명
 
