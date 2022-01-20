@@ -1,4 +1,4 @@
-# Critical Rendering Path
+# Front End - Critical Rendering Path
 
 ## 설명
 

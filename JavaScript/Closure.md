@@ -21,7 +21,7 @@
 
 #### 2-1. 예시 1
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 // 출처: 코어 자바스크립트
 
 var outer = function(){
@@ -65,7 +65,7 @@ console.log(outer2()); // 3
 
 ##### 예시 2-2. eventListener
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 // 출처: 코어 자바스크립트
 
 // 별도의 외부객체인 DOM의 메서드(addEventListener)에 등록할 핸들러 함수 내부에서 지역변수를 참조합니다.
@@ -112,7 +112,7 @@ var는 function scope이기 때문에 for문에서 var를 사용하면 전역변
 
 #### 5-2. 예시
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 
 // 출처 : 반복문 for에서 var를 사용하면 생기는 문제점 - draw.log
 
@@ -158,7 +158,7 @@ arr[4] = function () {
 
 ##### 5-2-1. 해결 방안 예시 1
 
-```javascript{ .numberLines}
+```javascript{.javascript.numberLines}
 
 // 출처 : 반복문 for에서 var를 사용하면 생기는 문제점 - draw.log
 
@@ -175,7 +175,7 @@ for (var i = 0; i < 5; i++) {
 
 ##### 5-2-2. 해결 방안 예시 2: let을 씁니다.
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 // 출처 : 반복문 for에서 var를 사용하면 생기는 문제점 - draw.log
 
 // 블록 스코프인 let 사용
@@ -190,7 +190,7 @@ for (let i = 0; i < 5; i++) {
 
 #### 5-3-1. 해결 방안 예시 1. return에 의한 클로저의 메모리 해제
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 // 출처: 코어 자바스크립트
 
 var outer = (funtion(){
@@ -212,7 +212,7 @@ outer = null;
 
 ##### 5-3-2. 해결 방안 예시 2. setInterval에 의한 클로저의 메모리의 해제
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 // 출처: 코어 자바스크립트
 
 (funtion(){
@@ -232,7 +232,7 @@ outer = null;
 
 ##### 5-3-3. 해결 방안 예시 3. eventListener에 의한 클로저의 메모리의 해제
 
-```javascript{ .numberLines}
+```javascript{.numberLines}
 // 출처: 코어 자바스크립트
 
 (function(){
