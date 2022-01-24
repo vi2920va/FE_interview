@@ -8,7 +8,7 @@ Typescript에서도 단일 타입이 아닌 다양한 타입에서 작동하는 
 
 ```tsx
 function memo(content: string): string {
-  return content
+  return content;
 }
 ```
 
@@ -16,7 +16,7 @@ function memo(content: string): string {
 
 ```tsx
 function memo(content: any): any {
-  return content
+  return content;
 }
 ```
 
@@ -24,11 +24,58 @@ function memo(content: any): any {
 
 ```tsx
 function memo<T>(content: T): T {
-  return content
+  return content;
 }
 ```
 
 - 위 함수에 T라는 타입을 추가해주면 함수를 호출할 때 넘긴 타입에 대해 타입스크립트가 추정할 수 있기 때문에 들어갈때와 나갈때 타입을 검증할 수 있게 됩니다.
+
+```tsx
+function textLength<T>(arg: T): number {
+  return arg.length; // 'T' 형식에 'length' 속성이 없습니다.
+}
+
+function textLength<T>(arg: T[]): number {
+  return arg.length;
+}
+```
+
+- 위 함수에 text의 길이를 리턴해주는 함수가 있다고 했을 때 제네릭 T가 length가 없는 number일 경우도 있습니다. 그러므로 에러를 리턴해줍니다.
+- 배열은 length를 가지기 때문에 T타입을 T[]로 사용해서 number[] 형식으로 사용할 수 있습니다.
+
+### 제네릭 예시
+
+```tsx
+interface IUser<T> {
+	name:string;
+	age:number;
+	hobby:T;
+}
+
+const minsu:IUser<string> = {
+	name:'민수';
+	age:27;
+	hobby:'축구';
+}
+
+const sumin:IUser<Array> = {
+	name:'수민';
+	age:30;
+	hobby:['영화보기','독서'];
+}
+```
+
+- interface에 제네릭 타입을 부여해 좀 더 유연하게 객체에 타입을 지정해 줄 수 있습니다.
+
+```tsx
+const request = {
+  post<params>(path: string, data: params): Promise<AxiosResponse<any>> {
+    return axios.post(url, data);
+  },
+};
+```
+
+- 위 request객체에서 axios post메소드의 data파라미터는 중간에 타입이 변경되면 안되기 때문에 <params>란 제네릭 타입을 지정해줘서 타입체크를 해줍니다.
 
 ## 요약
 
