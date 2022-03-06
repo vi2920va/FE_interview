@@ -14,7 +14,7 @@
 
 ```jsx
 let user = {
-  name: "철수",
+  name: '철수',
 };
 // user에 {name:"철수"}란 객체 참조 값이 저장됩니다.
 // <global> => user => {name:"철수"}
@@ -40,5 +40,5 @@ user = null;
 
 ## 참고
 
-- https://ko.javascript.info/garbage-collection
-- https://blog.metafor.kr/163
+- [코어 자바스크립트 - 가비지 컬렉션](https://ko.javascript.info/garbage-collection)
+- (가비지 컬렉션, 켈럭터 란?)[https://blog.metafor.kr/163]
