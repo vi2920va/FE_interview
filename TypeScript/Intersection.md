@@ -2,10 +2,8 @@
 
 ## 설명
 
-`&` 기호를 이용하여 모두 만족하는 하나의 타입을 인터섹션 타입(Intersection)이라고 부른다.
-<img width="571" alt="intersection-diagram 01f4fdfe" src="https://user-images.githubusercontent.com/76679130/156077918-4f1c7dea-0a99-426a-96b6-95d010f161ca.png">
-
-### 1. 예제 코드
+아래의 예시 코드 처럼 `Person` 과 `Developer` 를 둘 다 만족하는 하나의 타입의
+`&` 기호를 이용하여 정의하는게 인터섹션 타입(Intersection)이다.
 
 ```tsx
 interface Person {
@@ -29,6 +27,9 @@ console.log(D1); // { name: 'viva',....}
 ```
 
 ## 요약
+
+- 모두 만족하는 하나의 타입을 인터섹션 타입
+- 인터페이스 타입을 먼저 정의한 후에 `&` 연산자를 이용하여 정의
 
 ## 참고
 
