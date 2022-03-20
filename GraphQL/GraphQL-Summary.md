@@ -2,16 +2,14 @@
 
 ## 설명
 
-### GraphQL
+### 1. GraphQL
 
 GraphQL이란 Graph Query Language 라는 뜻으로 페이스북에서 2012년 만들어진 API를 위한 쿼리 언어 입니다.
 `REST-ful Routing` 이라는 개념을 살펴보면 `REST-ful Routing` 이란 URL과 HTTP 요청 메소드를 이용해서 서버에서 제공뙤는 데이터 모음들을 사용하게 하는 데이터 모음집 입니다.
 쉽게 설명하자면 `REST-ful API`와 관련된 정보들을 모아놓은 모음집이라고 이해하면 편할 것 같습니다. 하지만 일정한 규칙이 정해진 HTTP 요청 메소드들 (REST-ful API → 리소스가 표현되는 규칙을 )들의 경우 여러 데이터들이 중첩되거나 관련성이 높은데이터들에 대한 요청을 보내려고 할때 만들어지는 URL을 생각해보면 매우 복잡해집니다.
 하지만 GraphQL은 반환되는 데이터 구조와 거의 흡사한 구조의 쿼리형태를 보내면서 `GET`으로 취하게되는 URL 명세의 한계를 뛰어넘게 됩니다. 클라이언트에서 받고 싶은 데이터들을 쿼리로 받아버리면 그만이라 따로 `GET` 관련 명세는 백엔드에서 따로 만들지 않아도 되어버립니다.
 
----
-
-### 스칼라
+### 2. 스칼라
 
 스칼라 타입은 그래프 큐엘의 끝단을 정의하고 그래프 큐엘의 시작은 쿼리로 시작합니다. 뮤테이션은 쿼리와 같이 시작가능한데 POST 에 해당하는 서버의 데이터 수정을 요구하는 요청을 보낼때 사용합니다.
 스칼라 타입은 4가지의 타입이 있습니다.
@@ -21,40 +19,36 @@ GraphQL이란 Graph Query Language 라는 뜻으로 페이스북에서 2012년 �
 - String
 - Boolean
 
-### 인터페이스
+### 3. 인터페이스
 
-- GraphQh
-  ```graphql
-  interface Character {
-    id: ID!
-    name: String!
-    friends: [Character]
-    apeearsIn: [Episode]!
-  }
-  ```
-  Character를 상속하는 모든 타입은 이러한 인자와 리턴타입을 가지는 정확인 필드를 가져야 합니다.
-  ```graphql
-  type Human implements Character {
-    id: ID!
-    name: String!
-    friends: [Character]
-    apeearsIn: [Episode]!
-    starships: [Starship]
-    totalCredits: Int
-  }
-  ```
-  위 코드를 보다시피 인터페이스의 모든 속성을 그대로 복붙해서 정의하고 추가적인 속성을 추가 정의 하는 모습을 볼 수 있습니다.
-        ```graphql
-        query HeroForEpisode($ep: Episode!) {
-        	hero(episode: $ep) {
-        		name
-        		primaryFunction
-        	}
-        }
-        ```
+> GraphQh
 
+```graphql
+interface Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  apeearsIn: [Episode]!
+}
+```
 
-### 프래그 먼트
+Character를 상속하는 모든 타입은 이러한 인자와 리턴타입을 가지는 정확인 필드를 가져야 합니다.
+
+```graphql
+type Human implements Character {
+  id: ID!
+  name: String!
+  friends: [Character]
+  apeearsIn: [Episode]!
+  starships: [Starship]
+  totalCredits: Int
+}
+```
+
+위 코드를 보다시피 인터페이스의 모든 속성을 그대로 복붙해서 정의하고 추가적인 속성을 추가 정의 하는 모습을 볼 수 있습니다.
+`graphql query HeroForEpisode($ep: Episode!) { hero(episode: $ep) { name primaryFunction } }`
+
+### 4. 프래그 먼트
 
 ```graphql
 fragment Doodream on Character {
@@ -74,7 +68,7 @@ fragment Doodream on Character {
 
 프래그먼트는 같은 데이터구조가 반복될때 `...` 문법을 이용해서 반복되는 데이터구조를 대신 할 수 있습니다.
 
-### 인라인 프래그먼트
+### 5. 인라인 프래그먼트
 
 인터페이스나 유니언 타입을 반환하는 필드를 쿼리하는 경우 인라인 프래그 먼트를 사용해야합니다.
 
@@ -94,7 +88,7 @@ query HeroForEpisode($ep: Episode!) {
 
 `... on` 이러한 문법은 hero 에서 반환된 Charactor가 Droid 타입인 경우에만 실행됩니다. Human 타입인 경우에도 마찬가지 입니다.
 
-### 작업이름
+### 6. 작업이름
 
 작업타입은 쿼리, 뮤테이션, 구독(subscribe)이 될수 있습니다.
 
@@ -102,7 +96,7 @@ query HeroForEpisode($ep: Episode!) {
 
 작업 이름은 명시적인 작업의 이름으로서 디버깅이나 서버측에서 로깅할때 쿼리이름(작업이름)을ㅈ거어놓으면 내용을 훨씬 명시적으로 확인 가능합니다.
 
-### 변수
+### 7. 변수
 
 클라이언트측 코드는 쿼리 문자열을 런타임에 동적으로 조작합니다. 즉, 쿼리 문자열이 런타임에 동적으로 바뀔 수 있다는 상황입니다.
 
@@ -123,7 +117,7 @@ query HeroNameAndFriends($episode: Episode = "JEDI") {
 }
 ```
 
-### 변수 정의
+### 8. 변수 정의
 
 위 의 코드에서 `$episode` 변수의 타입은 `Episode` 가 됩니다. 일반적인 타입스크립트에서 정의하는 방식과 동일합니다.
 
@@ -133,7 +127,7 @@ query HeroNameAndFriends($episode: Episode = "JEDI") {
 
 ❗️ input object type이 뭘까? - 인자로 전달될 수 있는 특별한 종류의 객체타입! →스칼라 타입이 아니다.
 
-### 뮤테이션
+### 9. 뮤테이션
 
 query는 서버측의 데이터를 일방적으로 GET 하는 것에 초점을 맞춘 것이였다면
 
@@ -156,7 +150,7 @@ mutation CreateReviewForEpisode($ep: Episode!, $review: ReviewInput!) {
 
 Tip! : graphQL은 연습할 때 playground 에서 해도되지만 로컬에서 쿼리를 계속 날려보는것이 도움읻 된다.
 
-### 메타 필드
+### 10. 메타 필드
 
 GraphQL 서비스에서 리턴될 타입을 모르는 상황이 발생하면
 
@@ -166,7 +160,7 @@ GraphQL을 사용하면 쿼리의 어느 지점에서나 메타필드 `__typenam
 
 을 요청 : 그 시점에서 객체타입의 이름을 얻을 수 있다.
 
-### 입력타입
+### 11. 입력타입
 
 ```graphql
 input ReviewInput {
@@ -177,10 +171,10 @@ input ReviewInput {
 
 ```graphql
 mutation CreateReviewForEpisode ($ep : Episode!, $review: ReviewInput!){
-	createReview(episode : $ep, review: $review0{
-		stars,
-		commnentary
-	}
+createReview(episode : $ep, review: $review0{
+  stars,
+  commnentary
+  }
 }
 ```
 
@@ -196,13 +190,13 @@ mutation CreateReviewForEpisode ($ep : Episode!, $review: ReviewInput!){
 }
 ```
 
-### GraphQL 의 검증
+### 12. GraphQL의 검증
 
 타입 시스템을 사용하면 GraphQL 쿼리가 유효한지 여부를 미리 알수 있습니다. 이를 통해 런타임 검사에 의존하지 않고도 유효하지 않은 쿼리가 생성되었을 때 서버와 클라이언트가 효과적으로 개발자에게 알릴 수 있습니다.
 
 → 즉, 개발자 도구안에서 타입스크립트같이 유효성 검사를 실시간으로 지원하는 검증과정을 지원합니다.
 
-### GraphQL 실행
+### 13. GraphQL 실행
 
 유효성검사를 실행후 GraphQL의 쿼리는 GraphQL 서버에서 실행됩니다. 반환값은 JSON 형태로 반환됩니다.
 
@@ -249,7 +243,7 @@ type Starship {
 
 따라서 GraphQL 쿼리의 끝은 언제나 스칼라 값 입니다.
 
-### 스키마 확인
+### 14. 스키마 확인
 
 GraphQL은 스키마를 통해서 어떤쿼리를 지원하는지에 대한 정보를 알 수 있습니다. → `introspection`
 
@@ -294,19 +288,19 @@ __type(name: "Droid"){
 
 쿼리변수는 variables 라는 추가 쿼리파라미터에서 JSON 인코딩 문자열로 보낼수 있다.
 
-### 인증
+### 15. 인증
 
 GraphQL에서 보통 서버의 resolver 단에서 단일 인증을 통해 진행합니다.
 
-### 캐싱
+### 16. 캐싱
 
 객체 식별자를 제공하면 클라이언트가 풍부한 캐시를 구축 할 수 있습니다. → API들의 URL이 클라이언트가 캐시를 구성하는데 사용할 수 있는 전역 고유 식별자 입니다. → 전역고유 ID를 사용해서 캐시기능을 사용할 수 있습니다.
 
-### 전역 고유 ID (객체 식별자)
+### 17. 전역 고유 ID (객체 식별자)
 
 하지만, GraphQL에서는 고유 식별자를 제공하는 URL같은 원시값이 없기 때문에, 클라이언트가 API를 사용할 수 있도록 이러한 식별자를 노출하는 것이 좋습니다. 예) id
 
-### 유용한 도구
+### 18. 유용한 도구
 
 [playground](https://www.graphqlbin.com/v2/6RQ6TM)
 
