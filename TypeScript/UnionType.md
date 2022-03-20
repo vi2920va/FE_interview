@@ -42,6 +42,35 @@ function introduce(someone: Person | Developer) {
 }
 ```
 
+### 2. 유니온 타입을 사용한 예시
+
+```tsx
+interface Loading {
+  status: 'loading';
+}
+
+interface Faile {
+  status: 'faile';
+  code: number;
+}
+
+interface Success {
+  status: 'success';
+  response: any;
+}
+
+function introduce(state: Loading | Faile | Success) {
+  switch (state.status) {
+    case 'loading':
+      return '...로딩중';
+    case 'faile':
+      return state.code;
+    case 'success':
+      return state.response;
+  }
+}
+```
+
 ## 요약
 
 - A 이거나 B를 만족하는 타입을 **유니온 타입** 이라고 부른다.
@@ -49,3 +78,4 @@ function introduce(someone: Person | Developer) {
 ## 참고
 
 - [타입스크립트 핸드북](https://joshua1988.github.io/ts/guide/operator.html#union-type)
+- [타입스크립트 핸드북 ES](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes-func.html#unions)
