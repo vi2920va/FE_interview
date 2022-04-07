@@ -87,7 +87,7 @@ describe("RangeCounterA", () => {
   it("shows range reached alert when reached limit by clicking control buttons",
     () => {
       component = mount(<RangeCounterA min={0} max={1}  />);
-      **component.instance().incrementCounter(); // 함수를 컴포넌트에서 직접 호출**
+      component.instance().incrementCounter(); // 함수를 컴포넌트에서 직접 호출
       component.update();
       const alert = component.find('.RangeCounter__alert');
       expect(alert.text()).toEqual('Range limit reached!');
@@ -111,7 +111,7 @@ describe("RangeCounterB", () => {
     () => {
       const { getByText } = render(<RangeCounterB min={0} max={1} />);
       const incrementButton = getByText("+");
-      **fireEvent.click(incrementButton); // 사용자가 클릭하는 것처럼 호출**
+      fireEvent.click(incrementButton); // 사용자가 클릭하는 것처럼 호출
       expect(getByText("Range limit reached!")).toBeVisible();
     }
   );
