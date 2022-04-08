@@ -14,5 +14,8 @@ git-flow에는 5가지 종류의 브랜치가 존재합니다. 항상 유지되�
 
 ## 요약
 
+- git flow는 형상 관리 전략일 뿐이다.
+- 코드 형상/이력 관리를 효율적으로 하고, 협업할 때 발생할 수 있는 문제점을 최소할 수 있는이 전략이 git flow 이다.
+
 ## 참고
 - [git-flow cheatsheet](https://danielkummer.github.io/git-flow-cheatsheet/index.ko_KR.html)
