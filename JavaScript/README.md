@@ -10,6 +10,7 @@
 - [prototype](./Prototype.md)
 - [클로저](./Closure.md)
 - [클로저 예제](./Closure-example.md)
+- [일급함수](./%EC%9D%BC%EA%B8%89%ED%95%A8%EC%88%98.md)
 - [함수의 호출(call, apply, bind)](./Calll-apply-bind.md)
 - [화살표함수](./Arrow-Function.md)
 - [Ajax](./Ajax.md)
