@@ -42,4 +42,4 @@ Doctype은 어떤 버전의 HTML 문서에서 최상단에 선언되며, 어떠�
 
 ## 참고
 
-- [HTML5 강좌](https://theqoop.tistory.com/265)
+-DOCTYPE 이란? [→(BLOG)](https://theqoop.tistory.com/265)
