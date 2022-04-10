@@ -96,6 +96,6 @@ setTimeout(obj1.func.bind(obj2), 1500);
 
 ## 참고
 
-- [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
-- [코어자바스크립트 책](http://www.yes24.com/Product/Goods/78586788)
-- [코어자바스크립트 인프런 강의](https://www.inflearn.com/course/%ED%95%B5%EC%8B%AC%EA%B0%9C%EB%85%90-javascript-flow/dashboard)
+- CallBack Function [→ (MDN)](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
+- 코어자바스크립트 책 [→ (SITE)](http://www.yes24.com/Product/Goods/78586788)
+- 코어자바스크립트 인프런 강의 [→ (SITE)](https://www.inflearn.com/course/%ED%95%B5%EC%8B%AC%EA%B0%9C%EB%85%90-javascript-flow/dashboard)

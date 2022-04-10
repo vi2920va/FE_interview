@@ -40,5 +40,5 @@ user = null;
 
 ## 참고
 
-- [코어 자바스크립트 - 가비지 컬렉션](https://ko.javascript.info/garbage-collection)
-- (가비지 컬렉션, 켈럭터 란?)[https://blog.metafor.kr/163]
+- 가비지 컬렉션 [→ (SITE)](https://ko.javascript.info/garbage-collection)
+- 가비지 컬렉션, 켈럭터 란? [→ (SITE)][https://blog.metafor.kr/163]

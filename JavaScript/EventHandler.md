@@ -18,6 +18,7 @@
   - Angular/React/Svelte/Vue.js 같은 프레임워크/라이브러리에서는 이벤트 핸들러 어트리뷰트 방식으로 이벤트를 처리합니다.
 - 이벤트 핸들러 프로퍼티 방식
   - 이벤트 핸들러 프로퍼티에 함수를 바인딩하면 이벤트 핸들러가 등록됩니다.
+  
   ```js
   const $button = document.querySelector('button');
   
@@ -26,6 +27,7 @@
       console.log('button click');
   };
   ```
+
   - 이벤트 핸들러 프로퍼티 방식은 이벤트 핸들러 어트리뷰트 방식의 HTML과 자바스크립트가 뒤섞이는 문제를 해결할 수 있습니다.
   - 하지만 이벤트 핸들러 프로퍼티에 하나의 이벤트 핸들러만 바인딩할 수 있다는 단점이 있습니다.
   - 두 개이상의 이벤트 핸들러가 바인딩되면 첫 번째 바인딩된 이벤트 핸들러는 두 번째 바인딩된 이벤트 핸들러에 의해 재할당되어 실행되지 않습니다.
@@ -49,6 +51,7 @@
 - addEventListener 메서드로 등록한 이벤트 핸들러를 제거하려면 EventTarget.prototype.removeEventListener 메서드를 사용합니다.
 - removeEventListener 메서드에 전달할 인수는 addEventListener 메서드와 동일합니다.
 - 단, addEventListener 메서드에 전달한 인수와 removeEventListener 메서드에 전달한 인수가 일치하지 않으면 이벤트 핸들러가 제거되지 않습니다.
+  
 ```js
 const $button = document.querySelector('button');
 const handleClick = () => console.log('button click');
@@ -87,8 +90,6 @@ $button.addEventListener('click', function foo(){
 
 - 콜백함수는 비동기식 함수에서 결과를 반환할 때 호출되지만, 이벤트 핸들링은 옵저버 패턴에 의해 작동됩니다.
 - 콜백은 이벤트가 발생하면 특정 메서드를 호출해 알려주고(1개), 이벤트 리스너는 이벤트가 발생하면 연결된 이벤트 리스너 모두에게 이벤트를 전달합니다(n개).
-
-
 
 ## 요약
 

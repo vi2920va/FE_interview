@@ -27,5 +27,5 @@
 
 ## 참고
 
-- [Promise 쉽게 이해하기](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
-- [MDN Promise](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- Promise 쉽게 이해하기 [→ (BLOG)](https://joshua1988.github.io/web-development/javascript/promise-for-beginners/)
+- Promise [→ (MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Promise)

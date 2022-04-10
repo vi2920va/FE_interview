@@ -29,5 +29,6 @@ require와 import는 모두 자바스크립트에서 모듈을 불러오는 방�
 
 ## 참고
 
-- [D2](https://d2.naver.com/helloworld/12864)
-- [stackoverflow](https://stackoverflow.com/questions/31644189/javascript-require-in-browser)
+- JavaScript 표준을 위한 움직임 [→ (SITE)](https://d2.naver.com/helloworld/12864)
+
+- javascript require in browser [→ (SITE)](https://stackoverflow.com/questions/31644189/javascript-require-in-browser)

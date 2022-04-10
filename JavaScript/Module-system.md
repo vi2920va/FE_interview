@@ -60,5 +60,5 @@ top level await 주의해야 합니다.
 
 ## 참고
 
-- [MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
-- [velog](https://velog.io/@doondoony/JavaScript-Module-System)
+- Modules [→ (MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules)
+- JavaScript Module System [→ (BLOG)](https://velog.io/@doondoony/JavaScript-Module-System)

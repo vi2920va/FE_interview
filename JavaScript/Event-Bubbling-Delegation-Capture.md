@@ -52,4 +52,4 @@ JavaScript에서 DOM을 제어하면서 이벤트를 등록하면 이벤트가 �
 
 ## 참고
 
-- [이벤트 버블링과, 이벤트 캡쳐](https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%BA%A1%EC%B3%90---event-capture)
+- 이벤트 버블링과, 이벤트 캡쳐 [→ (SITE)](https://joshua1988.github.io/web-development/javascript/event-propagation-delegation/#%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%BA%A1%EC%B3%90---event-capture)

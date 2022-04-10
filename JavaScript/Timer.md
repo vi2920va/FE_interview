@@ -35,13 +35,7 @@ setTimeout(() => console.log("Hello!"));
 
   // setTimeout 함수가 반환한 타이머 id를 clearTimeout 함수의 인수로 전달하여 타이머를 취소합니다.
   clearTimeout(timerId);
-<<<<<<< HEAD
 ```
-
-=======
-
-````
->>>>>>> a5c0d128dfca31ca52c37a0269fbc1a90a1592f0
 
 - setInterval
   - setInterval 함수는 두 번째 인수로 전달받은 시간으로 반복 동작하는 타이머를 생성합니다.
@@ -60,11 +54,7 @@ setTimeout(() => console.log("Hello!"));
 
 - 디바운스는 짧은 시간 간격으로 이벤트가 연속해서 발생하면 이벤트 핸들러를 호출하지 않다가 일정 시간이 경과한 이후에 이벤트 핸들러가 한 번만 호출되도록 합니다.
 - 즉, 디바운스는 짧은 시간 간격으로 발생하는 이벤트를 그룹화해서 마지막에 한 번만 이벤트 핸들러가 호출되도록 합니다.
-<<<<<<< HEAD
-
-=======
-
->>>>>>> a5c0d128dfca31ca52c37a0269fbc1a90a1592f0
+  
 ```html
 <!DOCTYPE html>
 <html>

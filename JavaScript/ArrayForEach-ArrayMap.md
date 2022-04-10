@@ -41,5 +41,5 @@ array.map(callback(currentValue[, index[, array]])[, thisArg])
 
 ## 참고
 
-- [Array.prototype.forEach()-MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-- [Array.prototype.map()-MDN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- Array.prototype.forEach [→ (MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- Array.prototype.map [→ (MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/map)

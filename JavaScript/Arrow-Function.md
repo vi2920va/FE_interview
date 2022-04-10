@@ -35,5 +35,5 @@ person.sayHi(); // Hi undefined
 
 ## 참고
 
-[자바스크립트 화살표 함수 도입](https://ui.toast.com/weekly-pick/ko_20160912)
-[화살표함수(MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+- 자바스크립트 화살표 함수 도입 [→ (BLOG)](https://ui.toast.com/weekly-pick/ko_20160912)
+- 화살표함수 [→ (MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/Arrow_functions)

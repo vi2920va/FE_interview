@@ -46,4 +46,4 @@ let이나 const로 선언한 변수는 var로 선언한 변수와 달리 블록 
 
 ## 참고
 
-- [const에 대한 오해](https://hyunseob.github.io/2016/11/21/misunderstanding-about-const/)
+- const에 대한 오해 [→ (BLOG)](https://hyunseob.github.io/2016/11/21/misunderstanding-about-const/)

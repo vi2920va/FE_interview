@@ -125,5 +125,5 @@ obj.a()
 
 ## 참고
 
-- [MDN - This](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this)
-- [모던 JavaScript - 메서드와 this](https://ko.javascript.info/object-methods)
+- This [→ (MDN)](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/this)
+- 메서드와 this [→ (SITE)](https://ko.javascript.info/object-methods)

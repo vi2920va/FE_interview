@@ -61,4 +61,4 @@ bar(); //2
 
 ## 참고
 
-- [미디엄 블로그 - Lexical scope vs Dynamic scope](https://medium.com/@osmanakar_65575/javascript-lexical-and-dynamic-scoping-72c17e4476dd)
+- Lexical scope vs Dynamic scope  [→ (BLOG)](https://medium.com/@osmanakar_65575/javascript-lexical-and-dynamic-scoping-72c17e4476dd)
