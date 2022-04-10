@@ -29,7 +29,7 @@
 
 ## 참고
 
-- [z-index - MDN](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)
-- [z-index 속성의 이해](https://www.edwith.org/htmlcss/lecture/16620?isDesc=false)
-- [z-index가 동작하지않는 이유 4가지 (그리고 고치는 방법)](https://erwinousy.medium.com/z-index%EA%B0%80-%EB%8F%99%EC%9E%91%ED%95%98%EC%A7%80%EC%95%8A%EB%8A%94-%EC%9D%B4%EC%9C%A0-4%EA%B0%80%EC%A7%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EA%B3%A0%EC%B9%98%EB%8A%94-%EB%B0%A9%EB%B2%95-d5097572b82f)
-- [z-index에 관해 아무도 말해 주지 않은 것](https://mytory.net/archives/10997)
+- z-index [→(MDN)](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Positioning/Understanding_z_index/Adding_z-index)
+- z-index 속성의 이해 [→(SITE)](https://www.edwith.org/htmlcss/lecture/16620?isDesc=false)
+- z-index가 동작하지않는 이유 4가지 (그리고 고치는 방법) [→(SITE)](https://erwinousy.medium.com/z-index%EA%B0%80-%EB%8F%99%EC%9E%91%ED%95%98%EC%A7%80%EC%95%8A%EB%8A%94-%EC%9D%B4%EC%9C%A0-4%EA%B0%80%EC%A7%80-%EA%B7%B8%EB%A6%AC%EA%B3%A0-%EA%B3%A0%EC%B9%98%EB%8A%94-%EB%B0%A9%EB%B2%95-d5097572b82f)
+- z-index에 관해 아무도 말해 주지 않은 것[→(SITE)](https://mytory.net/archives/10997)
