@@ -30,4 +30,4 @@
 
 ## 참고
 
--[Cookie, Local Storage, Session Storage 각각의 차이점](https://fathory.tistory.com/33)
+-Cookie, Local Storage, Session Storage 각각의 차이점 [→(BLOG)](https://fathory.tistory.com/33)

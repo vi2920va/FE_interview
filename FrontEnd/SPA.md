@@ -25,4 +25,4 @@ SPA를 구현하면서 중요한 것은 기본적인 구성을 어떻게 하고,
 
 ## 참고
 
-- [리액트 프로그래밍 서적](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=124663551)
+- 리액트 프로그래밍 서적 [→(SITE)](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=124663551)

@@ -25,4 +25,5 @@ JWT(JSON Web Token)는 인증 토큰을 정의하는 방법에 대한 표준입�
 
 ## 요약
 
-JWT란 JSON 포맷을 이용하여 사용자에 대한 속성을 저장하는 claim(토큰에 담을 정보의 한 조각) 기반의 Web Token입니다. JWT는 토큰 자체를 정보로 사용하는 Self-contained 방식으로 정보를 안전하게 전달합니다.
+- JWT란 JSON 포맷을 이용하여 사용자에 대한 속성을 저장하는 claim(토큰에 담을 정보의 한 조각) 기반의 Web Token입니다.
+- JWT는 토큰 자체를 정보로 사용하는 Self-contained 방식으로 정보를 안전하게 전달합니다.

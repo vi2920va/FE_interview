@@ -60,4 +60,4 @@
 
 ## 참고
 
-- [쿠키와 세션의 차이](https://jeong-pro.tistory.com/80)
+- 쿠키와 세션의 차이 [→(BLOG)](https://jeong-pro.tistory.com/80)

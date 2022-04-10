@@ -103,10 +103,10 @@ app.use(cors({ origin: '허용 도메인' }));
 
 ## 참고
 
-- [MDN - 동일 출처 정책](https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy)
-- [MDN - CORS](https://developer.mozilla.org/ko/docs/Web/HTTP/CORS)
-- [AWS - REST API 리소스에 대한 CORS 활성화](https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/how-to-cors.html)
-- [web.dev - CORS](https://web.dev/cross-origin-resource-sharing/)
-- [stackexchange - CORS Proxy가 작동하는 방법](https://security.stackexchange.com/questions/191737/how-do-cors-proxy-websites-work)
-- [CORS 해결방법 내용 참고 블로그](https://xiubindev.tistory.com/115)
-- [CORS는 왜 이렇게 우리를 힘들게 하는걸까?](https://evan-moon.github.io/2020/05/21/about-cors/)
+- 동일 출처 정책 [→(MDN)](https://developer.mozilla.org/ko/docs/Web/Security/Same-origin_policy)
+- CORS [→(MDN)](https://developer.mozilla.org/ko/docs/Web/HTTP/CORS)
+- AWS - REST API 리소스에 대한 CORS 활성화 [→(SITE)](https://docs.aws.amazon.com/ko_kr/apigateway/latest/developerguide/how-to-cors.html)
+- COR S[→(SITE)](https://web.dev/cross-origin-resource-sharing/)
+- CORS Proxy가 작동하는 방법 [→(SITE)](https://security.stackexchange.com/questions/191737/how-do-cors-proxy-websites-work)
+- CORS 해결방법 [→(BLOG)](https://xiubindev.tistory.com/115)
+- CORS는 왜 이렇게 우리를 힘들게 하는걸까? [→(SITE)](https://evan-moon.github.io/2020/05/21/about-cors/)
