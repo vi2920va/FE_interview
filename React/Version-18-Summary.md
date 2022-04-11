@@ -352,11 +352,11 @@ useDeferredValue 훅은 css-in-js 라이브러리 저자들을 위해 만들어�
 
 <br />
 <br />
+
 ```js
 // 이렇게 만듭니다.
 
 useInsertionEffect(didUpdate);
-
 ```
 
 #### 3. 지원을 중단하는 기능들
@@ -388,5 +388,3 @@ useInsertionEffect(didUpdate);
 
 - [벨로그](https://velog.io/@jay/React-18-%EB%B3%80%EA%B2%BD%EC%A0%90)
 - [useTransition() vs useDeferredValue | React 18](https://www.youtube.com/watch?v=lDukIAymutM)
-- []()
-```
