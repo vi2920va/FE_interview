@@ -388,5 +388,4 @@ useInsertionEffect(didUpdate);
 
 - [벨로그](https://velog.io/@jay/React-18-%EB%B3%80%EA%B2%BD%EC%A0%90)
 - [useTransition() vs useDeferredValue | React 18](https://www.youtube.com/watch?v=lDukIAymutM)
-- []()
-```
+
