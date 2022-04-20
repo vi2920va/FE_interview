@@ -54,7 +54,9 @@ let observer = new IntersectionObserver((entities, observer) => {
 observer.observe(lastElement);
 ```
 
-![img](https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F74a0425e-f76b-4bc4-a0db-e1da1e3676fe%2FUntitled.png?table=block&id=710dfaf2-9a33-49cf-87dd-e7d5cf3012fc&spaceId=6c80bbf0-c204-46b7-ad0e-82bfdb2bc394&width=2000&userId=2fee838d-3fab-4dee-9e14-47b5e88c3164&cache=v2)마지막뷰(20번째박스)가 50%이상 뷰포트에 나왔을때 콘솔로그 출력.
+![img](https://i.postimg.cc/yxvv0fTg/image.png)
+
+마지막뷰(20번째박스)가 50%이상 뷰포트에 나왔을때 콘솔로그 출력.
 
 
 
