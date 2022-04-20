@@ -39,4 +39,8 @@
 아래의 **FE_Gather**누르면 스터디 게더 타운으로 이동 가능 합니다.
 
 [FE_Gather](https://gather.town/app/qmCHUelk7GsAt4JT/FE_Study)  
+
 [스터디 - 기본 운영 방침에 대하여 Q&A(수정)](https://github.com/vi2920va/FE_interview/discussions/13)
+
+[스터디 - 스터디 참여 방법](https://github.com/vi2920va/FE_interview/discussions/115)
+
