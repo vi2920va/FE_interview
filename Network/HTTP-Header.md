@@ -261,11 +261,7 @@ e.g.) 유저의 통장 잔고; 매번 바뀌는 정보이기 때문에 캐싱을
 
   - HTTP 1.0 하위 호환
 
-## 요약
-
 ## 참고
 
 - [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/dashboard)
 - [MDN](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers)
-- []()
-- []()
