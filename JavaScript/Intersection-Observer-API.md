@@ -32,7 +32,8 @@ Intersection Observer API는 감시하고자하는 요소가 다른 요소(뷰�
 
 1. 대상 요소가 기기 뷰포트나 특정 요소(root를 설정했다면 root요소, 아니면 document)와 교차함.
 2. observer가 **최초로 타겟을 관측하도록 요청**받을때.
-3. 
+
+
 
 ## 예제코드
 
