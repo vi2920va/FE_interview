@@ -2,37 +2,35 @@
 
 ## 설명
 
-### 1. JavaScript Engine - V8
+### 1. JavaScript Engine
 
-- JavaScript 엔진의 대표적인 예는 Google V8 엔진이 있다.
-- V8은 Chrome과 Node.js에서 사용된다.
-- 엔진은 주요 구성요소는 메모리 힙(Memory Heap), 콜 스택(Call Stack) 두 가지로 구성하게 된다
-  - 메모리 힙(Memory Heap) : 메모리 할당이 일어나는 곳
-  - 콜 스택(Call Stack) : 코드에 따라 호출 스택이 쌓이는 곳
+[![image.png](https://i.postimg.cc/BZY7Xcdb/image.png)](https://postimg.cc/t76NcPRG)
 
-### 2. Call Stack
+- 위의 예제 그림에서 확인할 수 있듯이 **메모리 힙(Memory Heap)**과 **콜 스택(Call Stack)**으로 구성되어 있습니다.
+- **Memory Heap**
+    - 메모리 할당이 이루어지는 곳입니다.
+- **Call Stack**
+    - 코드가 실행될 때 호출 스택이 쌓이는 공간 입니다.
+    - 즉, 호출된 함수는 Call Stack에 push 됩니다.
 
-- JavaScript는 기본적으로 싱글 쓰레드 기반의 언어로 한 번에 한 작업만 처리할 수 있다.
-- 호출 스택은 기본적으로 프로그램 상에서 어디 있는지를 기록하는 자료구조 이다.
-- 함수를 실행하면, 해당 함수는 호출 스택의 가장 상단에 위치하게 되고, 해당 함수의 실행이 끝날 때, 호출 스택에서 제거 하는게 스택의 역할이다.
+### 2. Web APIs
 
-### 3. Memory Heap
+- JavaScript는 **싱글 스레드(Single Thread)**기반으로 동작하는 언어이지만, 실행 환경인 브라우저에서 JavaScript 엔진 또는 Web APIs가 함께 동작하여 비동기 적으로 처리할 수 있습니다.
 
-- JavaScript에서 선언 함수는 모두 메모리 힙에서 저장된다.
+### 3. Callback Queue
 
-### 4. Web API
+- 비동기적으로 이벤트 발생시 실행해야 할 `callback` 함수가 **Callback Queue**에 추가됩니다.
 
-- Web API는 브라우저에서 제공하는 API들이다.
-- 대표적인 예로는 `setTimeOut` 함수가 있다.
+### 4. Event Loop
 
-### 5. Callback Queue
+- 이벤트 루프는 비동기 함수의 스케쥴링 담당한다. 일단 콜 스택에서 현재 실행중인 작업을 확인하고 태스크 큐의 대기 중인 함수가 있는지 반복해서 확인한다.
+- 그 후에 콜 스택이 비어있다면, 태스크 큐에 대기중인 함수가 있다면 첫 번째로 콜스택에 밀어준다.
 
-- 함수는 저장하는 자료구조로, 콜 스택과는 다르게 가장 먼저 들어온 함수를 가장 먼저 처리한다.
-- 특정 이벤트에 따른 콜백 함수를 정의하게 되면 콜백함수는 Callback Que 저장된다.
-
-### 6. Event Loop
-
-- 호출 스택이 다 비워지면 콜백 큐에 존재하는 함수를 하나씩 호출 스택으로 옮기는 역할은 한다.
+- **Event Loop**는 Call Stack과 Callback Queue의 상태를 체크하여, CallStack이 빈 상태가 되면, Callback Queue의 첫 번째 콜백 함수를 Call Stat으로 밀어넣어줍니다.
+- 이러한 반복적인 행동을 **틱(tick)**이라고 부릅니다.
 
 ## 요약
+
+- JavaScript 싱글 쓰레드 기반의 언어이지만 실행 환경인 브라우저에서 비동기적 작업 처리를 할 수 있게한다.
+
 
